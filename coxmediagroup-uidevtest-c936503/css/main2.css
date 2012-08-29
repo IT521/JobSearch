@@ -1,0 +1,156 @@
+/*----------------------------------------------------------------------------
+	main.css
+
+	this css-file contains all definitions
+
+ ----------------------------------------------------------------------------*/
+
+ /*--- body -----------------------------------------------------------------*/
+
+.gradient-bg {
+	max-width: 665px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-family: Georgia, "Times New Roman", Times, serif, Arial, "MS Trebuchet", sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	color: #202020;
+	background-color: #FFFFFF; 
+	background-image: url(../images/fallback-gradient.png); /* for IE */
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CCCCCC), to(#FFFFFF));
+	background-image: -webkit-linear-gradient(top, #CCCCCC, #FFFFFF); 
+	background-image:    -moz-linear-gradient(top, #CCCCCC, #FFFFFF);
+	background-image:     -ms-linear-gradient(top, #CCCCCC, #FFFFFF);
+	background-image:      -o-linear-gradient(top, #CCCCCC, #FFFFFF);
+}
+
+/*----------------------------------------------------------------------------
+ styles for specific classes and ids
+----------------------------------------------------------------------------*/
+h1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+td.LeftCol {
+	vertical-align: top;
+}
+td.RightCol {
+	padding-left:10px;;
+}
+div.SmallGray {
+	font-size: 12px;
+	color: #666666;
+}
+.ImgCaption div {
+	font-size: 10px;
+	text-align: right;
+	color: #666666;
+	float:right;
+}
+.ImgCaption span {
+	font-size: 10px;
+	text-align: right;
+	color: #666666;
+	clear: both;
+}
+.ImgCaption img {
+	min-height: 295px;
+	min-width: 170px;
+	display: inline;
+}
+.OptionsBar  {
+	width:100%;
+	border-width:0;
+	font-size: 12px;
+	color: #666666;
+}
+.OptionsBar td {
+	float:left;
+}
+.OptionsBar a:link {
+	text-decoration: none;
+	color: #666666;
+}
+.OptionsBar a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+.OptionsBar a:active {
+	text-decoration: none;
+	color: #666666;
+}
+.OptionsBar a:hover {
+	text-decoration: none;
+	color: #CC6600;
+}
+.OptionsBar img {
+	min-height: 16px;
+	min-width: 16px;
+	border-width: 0px;
+	vertical-align: middle;
+}
+.OptionsBar2 div {
+	clear: none;
+}
+.OptionsBar2 a:link {
+	text-decoration: none;
+	font-size: 12px;
+	color: #CC6600;
+}
+.OptionsBar2 a:visited {
+	text-decoration: none;
+	font-size: 12px;
+	color: #CC6600;
+}
+.OptionsBar2 a:active {
+	text-decoration: none;
+	font-size: 12px;
+	color: #CC6600;
+}
+.OptionsBar2 a:hover {
+	text-decoration: none;
+	font-size: 12px;
+	color: #666666;
+}
+.OptionsBar2 img {
+	min-height: 16px;
+	min-width: 16px;
+	display: inline;
+	border-width: 0px;
+	vertical-align: middle;
+}
+.Author div {
+	font-size: 10px;
+}
+.Author span {
+	font-size: 12px;
+	font-weight: bold;
+	color: #CC6600;
+}
+span.Author2  {
+	font-size: 10px;
+	font-weight: normal;
+	color: #202020;
+}
+hr.Dots {
+	border-width:1px;
+	border-style:dotted;
+	color:#666666;
+}
+br.ClearAll {
+	clear: both;
+}
+span.U {
+	text-decoration: underline;
+}		/* underline */
+
+/*--- links ----------------------------------------------------------------*/
+
+a:link {text-decoration: none;color: #CC6600;}		/* unvisited link */
+a:visited {text-decoration: none;color: #CC6600;}		/* visited link */
+a:hover {text-decoration: none;color: #666666;}			/* mouse over link */
+a:active {text-decoration: none;color: #CC6600;}			/* selected link */
