@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drag and Drop Icons</title>
+  <link rel="stylesheet" href="public/assets/css/drag-drop.css">
+  <script type="text/javascript" src="src/index.js"></script>
+</head>
+
+<body>
+  <h1>Drag and Drop</h1>
+  <div class="page">
+    <div class="main">
+      <div class="dnd-image-drag">
+        <div class="container">
+          <h3>Function Icons</h3>
+          <div id="drag" class="drag-container">
+          </div>
+        </div>
+        <div class="container">
+          <h3>Expression Area</h3>
+          <div id="drop" class="drop-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <figure class="drop"></figure>
+            <figure class="drop"></figure>
+            <figure class="drop"></figure>
+            <figure class="drop"></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="right-drop" style="display: none;">
+      <div class="dnd-image-drag">
+        <div class="container">
+          <h3>Placeholder area</h3>
+          <div id="drop-two" class="drop-container placeholder" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    (function () {
+      var images = [{
+        url: 'https://drive.google.com/uc?export=view&id=12f03_BhtGsvpvlG27lehaY_Alrjm8ZTG',
+        title: 'fan',
+      },
+      {
+        url: 'https://drive.google.com/uc?export=view&id=1ViRFYiQ54O8nc16EPrIEv-Px5vmHxDbu',
+        title: 'drill',
+      },
+      {
+        url: 'https://drive.google.com/uc?export=view&id=1s5y7H5KNejtoYZyU0uVwhGa0afAS4tXA',
+        title: 'cut',
+      },
+      {
+        url: 'https://drive.google.com/uc?export=view&id=1hEdVgSNrHsn6sEIkw-AC4DbjmkIlvX38',
+        title: 'saw',
+      }
+      ];
+      var dragElement = document.getElementById('drag');
+
+      images.forEach((image, index) => {
+        var value = index + 1;
+        var args = [];
+        var i;
+        for (i = 1; i <= value; i++) {
+          args.push(`arg${i}`);
+        }
+        var img = document.createElement('IMG');
+        img.setAttribute('src', image.url);
+        img.setAttribute('title', image.title);
+        img.setAttribute('data-value', value);
+        img.setAttribute('ondragstart', 'drag(event)');
+        img.setAttribute('id', `drag${value}`);
+
+        var figcaption = document.createElement('FIGCAPTION');
+        figcaption.innerHTML = `${image.title}(${args.join(',')})`;
+
+        var figure = document.createElement('FIGURE');
+        figure.setAttribute('class', 'drag');
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+        dragElement.appendChild(figure);
+      });
+    })();
+  </script>
+</body>
+
+</html>
