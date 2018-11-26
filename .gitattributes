@@ -4,6 +4,8 @@
 *.json eol=lf
 *.txt eol=lf
 *.md eol=lf
+*.gitattributes eol=lf
+*.gitignore eol=lf
 
 # Custom for Visual Studio
 *.cs     diff=csharp

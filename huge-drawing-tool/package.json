@@ -1,0 +1,47 @@
+{
+  "name": "huge-drawing-tool",
+  "version": "1.0.0",
+  "description": "Simple Drawing Tool",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IT521/JobSearch.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx babel src -d build",
+    "lint": "npx eslint src",
+    "lintf": "npx eslint --fix src",
+    "start": "node build",
+    "test": "jest"
+  },
+  "author": "Terry S Francis",
+  "license": "MIT",
+  "keywords": [
+    "huge coding challenge",
+    "drawing tool"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/plugin-transform-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/runtime": "^7.1.5",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "geometry-2d": "^0.2.1"
+  }
+}
