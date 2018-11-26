@@ -4,10 +4,16 @@ huge-drawing-tool is a simple drawing tool. It reads the `/public/assets/txt/inp
 
 ## Installation
 
-Use `git clone` to clone the repository [huge-drawing-tool](https://pip.pypa.io/en/stable/) to a local folder.
+Use `git clone` to clone the repository [JobSearch](https://github.com/IT521/JobSearch/) to a local folder.
 
+Clone with SSH
 ```bash
-git clone foobar
+git clone git@github.com:IT521/JobSearch.git
+```
+
+Clone with HTTPS
+```bash
+git clone https://github.com/IT521/JobSearch.git
 ```
 
 ## Usage
