@@ -1,30 +1,24 @@
 import createLine from './createLine';
-import createPoint from './createPoint';
-
 import drawCanvas from './drawCanvas';
 
 const drawRectangle = (drawnCanvas, canvas, coords) => {
   let rows = [...drawnCanvas];
 
-  let lineStart = createPoint(coords[0], coords[1]);
-  let lineEnd = createPoint(coords[2], coords[1]);
-  let vector = createLine(lineStart, lineEnd);
-  rows = drawCanvas(rows, canvas, vector);
+  let lineCoords = [coords[0], coords[1], coords[2], coords[1]];
+  const { vector: v1, rows: r1 } = createLine(rows, canvas, lineCoords);
+  rows = drawCanvas(r1, canvas, v1);
 
-  lineStart = createPoint(coords[0], coords[3]);
-  lineEnd = createPoint(coords[0], coords[1]);
-  vector = createLine(lineStart, lineEnd);
-  rows = drawCanvas(rows, canvas, vector);
+  lineCoords = [coords[0], coords[3], coords[0], coords[1]];
+  const { vector: v2, rows: r2 } = createLine(r1, canvas, lineCoords);
+  rows = drawCanvas(r2, canvas, v2);
 
-  lineStart = createPoint(coords[2], coords[3]);
-  lineEnd = createPoint(coords[2], coords[1]);
-  vector = createLine(lineStart, lineEnd);
-  rows = drawCanvas(rows, canvas, vector);
+  lineCoords = [coords[2], coords[3], coords[2], coords[1]];
+  const { vector: v3, rows: r3 } = createLine(r2, canvas, lineCoords);
+  rows = drawCanvas(r3, canvas, v3);
 
-  lineStart = createPoint(coords[0], coords[3]);
-  lineEnd = createPoint(coords[2], coords[3]);
-  vector = createLine(lineStart, lineEnd);
-  rows = drawCanvas(rows, canvas, vector);
+  lineCoords = [coords[0], coords[3], coords[2], coords[3]];
+  const { vector: v4, rows: r4 } = createLine(r3, canvas, lineCoords);
+  rows = drawCanvas(r4, canvas, v4);
 
   return rows;
 };

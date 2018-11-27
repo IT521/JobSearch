@@ -6,10 +6,10 @@ const drawBlankCanvas = (canvas) => {
   let i;
   let j;
   let row;
-  for (i = canvas.topLeft.y; i >= canvas.bottomRight.y; i--) {
+  for (i = canvas.topLeft.y; i >= canvas.bottomRight.y; i -= 1) {
     const isOuterRow = (i === canvas.bottomRight.y || i === canvas.topLeft.y);
     row = '';
-    for (j = canvas.topLeft.x; j <= canvas.bottomRight.x; j++) {
+    for (j = canvas.topLeft.x; j <= canvas.bottomRight.x; j += 1) {
       if (isOuterRow) {
         row += '-';
       } else if (j === canvas.topLeft.x || j === canvas.bottomRight.x) {
@@ -26,7 +26,7 @@ const drawBlankCanvas = (canvas) => {
 const isFillable = (drawnCanvas, rowIndex, columnIndex) => {
   let rowAbove = false;
   let i;
-  for (i = rowIndex - 1; i >= 0; i--) {
+  for (i = rowIndex - 1; i >= 0; i -= 1) {
     const row = drawnCanvas[i].split('');
     if (row.includes(X)) {
       rowAbove = columnIndex < row.length && row[columnIndex] === X;
@@ -46,11 +46,11 @@ const drawCanvas = (drawnCanvas, canvas, line, mark = X) => {
     let i;
     let j;
     let row = [];
-    for (i = rowsLength - 1; i >= 0; i--) {
+    for (i = rowsLength - 1; i >= 0; i -= 1) {
       const isOuterRow = (i === canvas.bottomRight.y || i === canvas.topLeft.y);
       const isInnerRow = (i >= line.from.y && i <= line.to.y);
       row = rows[i].split('');
-      for (j = canvas.topLeft.x; j <= canvas.bottomRight.x; j++) {
+      for (j = canvas.topLeft.x; j <= canvas.bottomRight.x; j += 1) {
         const isOuterColumn = (j === canvas.topLeft.x || j === canvas.bottomRight.x);
         const isInnerColumn = (j >= line.from.x && j <= line.to.x);
         if (

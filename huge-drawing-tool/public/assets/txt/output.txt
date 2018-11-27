@@ -1,30 +1,6 @@
 ---------------------
-|                   |
-|                   |
-|                   |
-|                   |
----------------------
----------------------
-|                   |
-|xxxxxx             |
-|                   |
-|                   |
----------------------
----------------------
-|                   |
-|xxxxxx             |
-|     x             |
-|     x             |
----------------------
----------------------
-|               xxxx|
-|xxxxxx         x  x|
-|     x         xxxx|
-|     x             |
----------------------
----------------------
-|oooooooooooooooxxxx|
-|xxxxxxooooooooox  x|
-|     xoooooooooxxxx|
-|     xooooooooo    |
+|ooooooooooooooo    |
+|ooooooooooooooo    |
+|ooooooooooooooo    |
+|ooooooooooooooo    |
 ---------------------

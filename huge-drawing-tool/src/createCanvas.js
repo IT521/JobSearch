@@ -1,10 +1,13 @@
 import createRectangle from './createRectangle';
-import createPoint from './createPoint';
+import drawCanvas from './drawCanvas';
 
 const createCanvas = (width = 20, height = 5) => {
-  const topLeft = createPoint(0, +height);
-  const bottomRight = createPoint(+width, 0);
-  return createRectangle(topLeft, bottomRight);
+  const lineCoords = [0, +height, +width, 0];
+  const { rectangle: canvas } = createRectangle(null, null, lineCoords);
+  return ({
+    canvas,
+    rows: drawCanvas(null, canvas),
+  });
 };
 
 module.exports = createCanvas;

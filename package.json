@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Various Job Search Projects",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "echo \"Warning: ESLint not run\" && exit 0",
+    "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "repository": {
     "type": "git",

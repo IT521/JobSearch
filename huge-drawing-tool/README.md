@@ -21,7 +21,6 @@ git clone https://github.com/IT521/JobSearch.git
 ```bash
 cd huge-drawing-tool
 npm install
-npm run compile
 npm run start
 ```
 
